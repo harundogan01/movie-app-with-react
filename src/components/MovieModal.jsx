@@ -9,9 +9,10 @@ const MovieModal = ({ movie, onClose }) => {
     return (
         <>
             <div className='fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50'>
-                <div className='bg-white rounded-lg shadow-lg max-w-2xl w-full p-6 relative'>
+                <div className='bg-white rounded-lg shadow-lg w-full p-6 relative
+                xs:overflow-hidden xs:overflow-y-auto 2xs:w-3/4 2xs:h-auto'>
                     <button onClick={onClose}
-                    className='absolute top-4 right-4 text-gray-600 hover:text-gray-900 text-xl'>
+                    className='absolute 2xs:top-0 2xs:text-[30px] top-4 right-4 text-gray-600 hover:text-gray-900 text-xl'>
                         &times;
                     </button>
 

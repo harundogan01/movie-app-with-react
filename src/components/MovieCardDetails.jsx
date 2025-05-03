@@ -11,7 +11,7 @@ const MovieCardDetails = ({ movie }) => {
             <div className="flex flex-col md:flex-row gap-6">
                 <img src={`${tmdbConfig.imageUrl + movie.poster_path}`} 
                     alt={movie.title}
-                    className="w-full md:w-1/3 rounded"
+                    className="w-full md:w-1/3 rounded xs:w-[300px] xs:h-[300px] sm:h-auto"
                 />
                 <div className="flex-1">
                     <h2 className="text-2xl font-bold mb-2">{movie.title}</h2>

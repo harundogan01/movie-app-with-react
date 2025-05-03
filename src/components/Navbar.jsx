@@ -49,7 +49,7 @@ const Navbar = ({ onSearch, onCategoryChange, onFavoritesClick }) => {
     return (
         <>
             <nav className='bg-white shadow sticky top-0 z-50'>
-                <div className='container mx-auto px-4 py-3 flex flex-col md:flex-row items-center justify-between gap-4'>
+                <div className='mx-auto px-4 py-3 flex flex-col md:flex-row items-center justify-between gap-4'>
                     <Link to="/" className='text-xl font-bold text-blue-600'>
                         🎬 Movie App
                     </Link>
@@ -59,7 +59,7 @@ const Navbar = ({ onSearch, onCategoryChange, onFavoritesClick }) => {
                             className='border rounded px-3 py-1 w-full md:w-64'
                         />
                         <button type='submit' className='bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-700'>
-                            🔍 Search
+                            🔍 <span className='2xs:hidden md:inline'>Search</span>
                         </button>
                     </form>
                     <select onChange={e => onCategoryChange(e.target.value)} className='border px-3 py-1 rounded w-full md:w-auto'>
