@@ -38,7 +38,7 @@ const Login = () => {
             </Helmet>
             <div className='min-h-screen flex items-center justify-center bg-gray-100 p-4'>
                 <form onSubmit={handleLogin} className='bg-white p-6 rounded-lg shadow-md w-full max-w-sm'>
-                    <h2 className='text-2xl font-bold mb-4 text-center'>log In</h2>
+                    <h2 className='text-2xl font-bold mb-4 text-center'>Log In</h2>
                     <input type='email' placeholder='E-mail' value={email} onChange={(e) => setEmail(e.target.value)}
                         className='w-full p-2 border rounded mb-4' required
                     />
@@ -46,7 +46,7 @@ const Login = () => {
                         className='w-full p-2 border rounded mb-4' required
                     />
                     <button type='submit' className='w-full bg-green-600 rounded hover:bg-green-700 text-white py-2'>
-                        log In
+                        Log In
                     </button>
                     <p className='mt-4 text-center text-sm'>
                         Don't have an account?{" "}

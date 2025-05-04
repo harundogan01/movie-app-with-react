@@ -1,6 +1,6 @@
 import SkeletonCard from "@/components/SkeletonCard"
 import { useState, useEffect, lazy, Suspense } from "react"
-import { useOutletContext } from 'react-router-dom'
+import { useOutletContext, useNavigate } from 'react-router-dom'
 import { Helmet } from "react-helmet-async"
 import { toast } from "react-toastify"
 import { firebaseConfig, tmdbConfig } from '@/firebase/config'
@@ -22,6 +22,7 @@ const Home = () => {
     const [hasMore, setHasMore] = useState(true)
     const [loading, setLoading] = useState(true)
     const [selectedMovie, setSelectedMovie] = useState(null)
+    const navigate = useNavigate()
 
     const [showModal, setShowModal] = useState(false)
 
@@ -29,7 +30,7 @@ const Home = () => {
 
     const handleFavoriteClick = async (movie) => {
         if (!user) {
-            window.location.href = '/login'
+            navigate('/login')
             return
         }
 
